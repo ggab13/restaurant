@@ -1,0 +1,328 @@
+@font-face {
+  font-family: 'Spongeboy\ Me\ Bob';
+  src: url("fonts/Spongeboy Me Bob.ttf") format("ttf");
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(179, 177, 177, 0.726)), to(rgba(0, 0, 0, 0.493))), url("images/etterem.jpg");
+  background: linear-gradient(rgba(179, 177, 177, 0.726), rgba(0, 0, 0, 0.493)), url("images/etterem.jpg");
+  background-size: 100% 100%;
+  background-position-y: 50px;
+  background-repeat: no-repeat;
+  font-family: 'Spongeboy\ Me\ Bob';
+  font-size: 16px;
+}
+
+body * {
+  font-family: 'Spongeboy\ Me\ Bob';
+}
+
+body #content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+body #content header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 2fr 1fr;
+      grid-template-columns: 0.5fr 2fr 1fr;
+  padding: 1rem 3rem;
+  background-color: #ffc72c;
+  text-align: center;
+}
+
+body #content header #logo {
+  content: url("images/logo.png");
+  margin: 0 3rem;
+  width: 150px;
+  height: auto;
+  padding: 0.1rem;
+  border-radius: 100px;
+  -webkit-filter: invert(100%) sepia(10%) saturate(50%) hue-rotate(100%) brightness(0%) contrast(100%);
+          filter: invert(100%) sepia(10%) saturate(50%) hue-rotate(100%) brightness(0%) contrast(100%);
+  background-color: white;
+}
+
+body #content header #logo::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+body #content header h1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  margin-top: 2rem;
+  font-size: 4rem;
+  color: #da291c;
+  text-shadow: 3px 3px #166cee;
+}
+
+body #content nav {
+  position: relative;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  top: 3rem;
+}
+
+body #content nav button {
+  position: relative;
+  z-index: 2;
+  margin: 0 5px;
+  width: 125px;
+  height: 75px;
+  border: none;
+  background-color: #166cee;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #da291c;
+}
+
+body #content nav button:hover {
+  -webkit-animation: menuColorChange 1s;
+          animation: menuColorChange 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+body #content nav .active {
+  border: 4px solid black;
+}
+
+body #content nav .inactive {
+  border: none;
+}
+
+body #content nav .spongebob {
+  content: url("images/spongebob.png");
+  position: absolute;
+  z-index: 1;
+  bottom: 90px;
+  overflow: hidden;
+  margin-left: -110px;
+  width: 4.5rem;
+  height: auto;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body #content nav #home-btn:hover + #sponge-home {
+  -webkit-animation: moveBob 3s;
+          animation: moveBob 3s;
+}
+
+body #content nav #menu-btn:hover + #sponge-menu {
+  -webkit-animation: moveBob 3s;
+          animation: moveBob 3s;
+}
+
+body #content nav #contact-btn:hover + #sponge-contact {
+  -webkit-animation: moveBob 3s;
+          animation: moveBob 3s;
+}
+
+body #tab-content {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 1100px;
+  padding: 1rem;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  color: white;
+}
+
+body #tab-content #home {
+  -webkit-animation: contentChange 3s;
+          animation: contentChange 3s;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 1, 1, 0.5)), to(rgba(218, 41, 28, 0.7)));
+  background: linear-gradient(rgba(8, 1, 1, 0.5), rgba(218, 41, 28, 0.7));
+  padding: 1rem;
+  border: 0px solid;
+  border-radius: 25px;
+}
+
+body #tab-content #menu {
+  -webkit-animation: contentChange 3s;
+          animation: contentChange 3s;
+}
+
+body #tab-content #menu #galley-grub {
+  content: url("images/galley.jpg");
+  width: 500px;
+  height: auto;
+  border: 5px solid #da291c;
+}
+
+body #tab-content #contact {
+  -webkit-animation: contentChange 3s;
+          animation: contentChange 3s;
+}
+
+body #tab-content #contact h2 {
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  width: 350px;
+  font-size: 2.5rem;
+  color: black;
+  border-bottom: 5px solid #da291c;
+}
+
+body #tab-content #contact ul li {
+  line-height: 50px;
+  font-size: 1.5rem;
+}
+
+body #tab-content #contact #wink {
+  content: url("images/wink.png");
+  width: 10rem;
+  height: auto;
+}
+
+body #tab-content a {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 300px;
+  height: 4rem;
+  border-radius: 50px;
+  border: 10px solid #166cee;
+  background-color: #ffc72c;
+  font-size: 2rem;
+  text-align: center;
+  color: #da291c;
+}
+
+body #tab-content a #order-burger {
+  content: url("images/krabbypatty.png");
+  width: 180px;
+  position: absolute;
+  height: auto;
+  right: -100px;
+  bottom: -50px;
+}
+
+body #tab-content a:hover {
+  color: black;
+}
+
+footer {
+  margin-top: auto;
+  padding: 0.5rem 0;
+  background-color: #166cee;
+  text-align: center;
+  font-size: 2rem;
+}
+
+footer #ggab13 {
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+
+footer #ggab13 a {
+  text-decoration: none;
+  color: black;
+}
+
+footer #ggab13 a:hover {
+  color: white;
+}
+
+footer #ggab13 #valsz {
+  color: #fcc688;
+}
+
+footer #ggab13 img {
+  width: 50px;
+  content: url("images/github.png");
+}
+
+@-webkit-keyframes moveBob {
+  0% {
+    bottom: 90px;
+  }
+  50% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: 90px;
+  }
+}
+
+@keyframes moveBob {
+  0% {
+    bottom: 90px;
+  }
+  50% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: 90px;
+  }
+}
+
+@-webkit-keyframes menuColorChange {
+  from {
+    color: #da291c;
+  }
+  to {
+    color: #ffc72c;
+  }
+}
+
+@keyframes menuColorChange {
+  from {
+    color: #da291c;
+  }
+  to {
+    color: #ffc72c;
+  }
+}
+
+@-webkit-keyframes contentChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
