@@ -12,8 +12,6 @@ function menuPage() {
     div.appendChild(img)
     const content = document.getElementById('tab-content');
     content.appendChild(div)
-
     
-
 }
 export default menuPage;
