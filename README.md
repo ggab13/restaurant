@@ -36,7 +36,7 @@ npm install
  ```sh
  cd restaurant  
  ```
-5. - Open the index.html file in your web browser to play the game.
+5. - Open the index.html file in your web browser.
   ```sh
  start index.html  
  ```
